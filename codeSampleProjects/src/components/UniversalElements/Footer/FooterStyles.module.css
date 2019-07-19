@@ -1,0 +1,142 @@
+.footer {
+    background: linear-gradient(to bottom right, rgb(73, 78, 78), rgb(58, 63, 58));
+    width: 100%;
+}
+
+/*Upper Footer Styles*/
+.upperFooter {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navLinks {
+    width: 66%;
+    display: flex;
+    float: left;
+}
+
+.navLink {
+    width: 33%;
+    float: left;
+}
+
+.navLinkHeader {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: rgb(0, 148, 216);
+    /*
+    transition: all 350ms ease;
+    */
+}
+/*
+.navLinkHeader:hover {
+    color: white;
+}
+*/
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: .85rem;
+    transition: 350ms ease;
+    transition-property: color;
+}
+
+.link:hover {
+    color: rgb(0, 148, 216);
+}
+
+.sectionRight {
+    width: 33%;
+    float: left;
+}
+
+.location {
+    width: 100%;
+}
+
+.sectionRight p {
+    color: white;
+    font-size: .85rem;
+    margin: 0;
+}
+
+.memberOrgs {
+    width: 100%;
+}
+
+.logoContainer {
+    border: 1px solid rgb(36, 28, 28);
+}
+
+.expander{
+    clear: both;
+}
+
+/*Lower Footer Styles*/
+.lowerFooterArea {
+    background-color: rgb(29, 29, 29);
+}
+
+.lowerFooterContentArea {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.lowerFooterLeft {
+    float: left;
+}
+
+.lowerLink {
+    color: white;
+    text-decoration: none;
+    font-size: .85rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 3px solid rgb(73, 78, 78);
+    transition: 350ms ease;
+    transition-property: color;
+}
+
+.lowerLink:hover {
+    color: rgb(0, 148, 216);
+}
+
+.lowerLink:first-child {
+    margin-left: 0px;
+}
+
+.lowerLink:last-child {
+    border: none;
+}
+
+.socialMedia {
+    float: right;
+    width: 33%;
+}
+
+.socialMedia img {
+    float: right;
+    margin-right: 5px;
+}
+
+.socialMedia a:nth-child(1) img {
+    margin-right: 0px;
+}
+
+.socialMedia a:nth-child(2) img {
+    width: 28px;
+    height: 28px;
+}
+
+.socialMedia a:nth-child(3) img {
+    width: 28px;
+    height: 28px;
+}
+

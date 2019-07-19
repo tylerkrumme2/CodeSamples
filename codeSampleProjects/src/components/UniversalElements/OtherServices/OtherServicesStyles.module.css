@@ -1,0 +1,63 @@
+.otherServices {
+    background-color: rgb(216, 216, 216);
+}
+
+
+.titleBlock h4{
+    text-decoration: none;
+    padding-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 148, 216);
+}
+
+.linkContainer {
+    width: 100%;
+}
+
+.linkBox {
+    width: 33.3333333%;;
+    height: 300px;
+    float: left;
+    text-align: center;
+    background-image: url(https://source.unsplash.com/random/800x300);
+    background-position: center;
+    background-size: cover;
+}
+
+.linkBox p {
+    display: none;
+    color: white;
+}
+
+.linkBox h5 {
+    padding-top: 18%;
+    color: white;
+}
+
+.overlay {
+    height: 100%;
+}
+
+.linkBox:hover > .overlay {
+    background-color: rgba(25, 25, 25, 0.452);
+    transition: 350ms ease;
+}
+
+.linkBox:hover > .overlay > h5 {
+    padding-top: 10%;
+    transition: 350ms ease;
+}
+
+.linkBox:hover > .overlay > p {
+    display: block;
+    transition: 350ms ease;
+}
+
+.expander {
+    clear: both;
+}

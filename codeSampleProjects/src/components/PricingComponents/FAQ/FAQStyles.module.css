@@ -1,0 +1,55 @@
+.FAQ {
+    clear: both;
+    margin-top: 50px;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
+.FAQ h4 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.QABox {
+    float: left;
+    width: 100%;
+}
+
+.QABox h6 {
+    margin-top: 30px;
+    float: left;
+    font-size: .9rem;
+    margin-bottom: 0px;
+}
+
+.QABox h6:hover {
+    cursor: pointer;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.answer_shown {
+    clear: both;
+    display: block;
+    float: left;
+}
+
+.QABox p {
+    font-size: .8rem;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.answer_hidden {
+    display: none;
+    float: left;
+}
+
+.expander {
+    clear: both;
+}

@@ -1,0 +1,35 @@
+
+
+.beginNow {
+    width: 100%;
+    height: 500px;
+    clear: both;
+}
+
+.content {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+.content h4{
+    color: rgb(0, 148, 216);
+    font-size: 2.25rem;
+}
+
+.button {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.btn_container {
+    width: 50%;
+    float: left;
+}
+
+.expander {
+    clear: both;
+}

@@ -1,0 +1,134 @@
+.expander {
+    clear: both;
+}
+
+img {
+    margin-bottom: 0;
+}
+
+.btn {
+    border: 3px solid rgb(46, 123, 185);
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.btn p {
+    padding: 5px;
+    margin-bottom: 0px;
+    font-size: 1.25rem;
+}
+
+
+
+/* THESE ARE STYLES FOR SCREEN WIDTH OF 980px AND FEWER */
+@media only screen and (max-width: 980px) {
+
+    .boilerPlate {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+
+    /* -----Boiler Right Img----- */
+
+    .img_right {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contentArea_right {
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* -----Boiler Left Img----- */
+
+    .img_left {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contentArea_left {
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        width: 60%;
+        max-width: 250px;
+    }
+}
+
+
+
+/* THESE ARE STYLES FOR SCREEN WIDTH OF 981px AND GREATER */
+@media only screen and (min-width: 981px) {
+
+    .boilerPlate {
+        margin-top: 35px;
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    /* -----Boiler Right Img----- */
+
+    .img_right {
+        float: right;
+        max-width: 33%;
+    }
+
+    .contentArea_right{
+        float: left;
+        margin-right: 3%;
+        width: 63%
+    }
+
+    /* -----Boiler Left Img----- */
+
+    .img_left {
+        float: left;
+        max-width: 33%;
+    }
+
+    .contentArea_left {
+        float: left;
+        margin-left: 3%;
+        width: 63%;
+    }
+
+}
+
+/* Children Styles */
+
+
+
+.contentArea_right h2, .contentArea_left h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.contentArea_right p, .contentArea_left p {
+    font-size: .8rem;
+}

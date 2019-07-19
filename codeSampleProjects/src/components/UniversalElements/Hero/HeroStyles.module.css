@@ -1,0 +1,63 @@
+.background {
+    margin-top: 0px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 700px;
+    min-height: 500px;
+}
+
+.wrap {
+    margin-top: 0px;
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+    height: 700px;
+    float: left;
+    z-index: 1;
+    background-color: rgba(0,0,0,.3);
+}
+
+.video {
+    max-width: 100vw;
+    vertical-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-15%);
+}
+
+.overlay {
+    position: relative;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+}
+
+
+/*
+
+.overlay {
+}
+
+.contentWrap {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    background-color: rgba(61, 61, 61, 0.301);
+}
+
+.children {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 1000px;
+}
+
+*/
+
+.expander {
+    clear: both;
+}

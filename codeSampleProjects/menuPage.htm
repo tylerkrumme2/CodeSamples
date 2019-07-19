@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CID Assignment</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--
+
+CID Name Assignment (change the title tag above too!)
+
+What objectives are you demonstrating?
+
+-->
+
+<style>
+  section#menu{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+  }
+  #menuItem{
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+  .hidden{
+    display: none;
+  }
+  .inline{
+    display: inline;
+  }
+  
+
+</style>
+
+<script>
+</script>
+
+</head>
+<body>
+<body style = "margin: 4%;">
+
+<h1>Menu</h1>
+<section id="outputArea"></section>
+
+<section id="testArea"></section>
+
+
+
+
+</body>
+
+<script>
+var invoiceTextOutput = "";
+var data = {
+  "notes" : [
+    "*All Menu Items Served Open to Close*",
+    "Breakfast",
+    "Lunch",
+    "Cereal & Oatmeal",
+    "Sides",
+    "Desserts",
+    "Ask your server what treats we have today!",
+    "Not for Kids Only",
+    "*Meats or eggs that are undercooked to your specification may increase your risk of foodborne illness.",
+    "Beverages",
+    "Blast From The Past!"
+  ],
+  "menuItems" : [
+    
+    {
+      "name" : "15th Street Standard", "cost" : "6.25",
+      "desc" : "2 eggs* any style, house potatoes & toast",
+      "adds" : [
+        {"desc" : "Sub toast w/ fruit cup", "cost" : "1.50"},
+        {"desc" : "Add ham, sausage, bacon or spam", "cost" : "2.50"}
+      ]
+    },
+    
+    {
+      "name" : "Breakfast Sandwich", "cost" : "5.25",
+      "desc" : "Scrambled eggs, cheese w/ hame, sausage, bacon, or spam on a bagel, croissant, or English muffin.",
+      "adds" : []
+    },
+    
+    {
+      "name" : "Breakfast Burrito", "cost" : "5.50",
+      "desc" : "Scrambled eggs, cheese, house potatoes w/ salsa side",
+      "adds" : [
+        {"desc" : "Add ham, sausage, bacon, or spam", "cost" : "1.25"},
+        {"desc" : "Add extra egg or sour cream", "cost" : "1.25"}
+      ]
+    },
+    
+    {
+      "name" : "Green Eggs & Ham", "cost" : "10.95",
+      "desc" : "(Pesto - Mozzarella - Ham - Scram) Served with house potatoes & toast",
+      "adds" : [
+        {"desc" : "Sub toast w/ fruit cup", "cost" : "1.50"}
+      ]
+    }, 
+    
+    {
+      "name" : "Chorizo & Eggs", "cost" : "10.95",
+      "desc" : "(Scrambled w/ Cheese) Served with two warm tortillas, house potatoes & sour cream",
+      "adds" : []
+    },
+    
+    {
+      "name" : "Lox Plate*", "cost" : "10.95",
+      "desc" : "Cold smoked salmon with bagel, cream cheese, red onion, tomato & capers",
+      "adds" : []
+    },
+    
+    {
+      "name" : "Belgian Waffle / Pancakes / French Toast", "cost" : "5.95",
+      "desc" : "Basic",
+      "adds" : [
+        {"desc" : "Deluxe (with 2 eggs* & choice of breakfast meat)", "cost" : "9.95"},
+        {"desc" : "Add blueberries or strawberries with whip cream", "cost" : "2.50"}
+      ]
+    },
+    
+    {
+      "name" : "Grateful Bowl", "cost" : "4.20",
+      "desc" : "Brown rice & melted cheese with salsa, fruit side and a muffin",
+      "adds" : []
+    },
+    
+    {
+      "name" : "Moon Biscuits & Gravy", "cost" : "6.95",
+      "desc" : "(Biscuit Batter in the Waffle Iron, while supplies last.)",
+      "adds" : [
+        {"desc" : "Deluxe (with 2 eggs* & potatoes)", "cost" : "10.95"},
+        {"desc" : "Extra gravy", "cost" : "1.75"}
+      ]
+    },
+    
+    {
+      "name" : "Create An Omelette", "cost" : "10.95",
+      "desc" : "Served with house potatoes & toast, With choice of (4) four items:",
+      "adds" : [
+        { 
+        "extras" : [
+          "Ham", "Sausage", "Bacon", "Spam",
+          "Cheddar", "Swiss", "Jack", "Mozzarella", "Pepper Jack", "Feta",
+          "Red Onion", "Mushroom", "Bell Pepper", "Spinach", "Tomato"
+        ],
+        "note" : "Add some more things @ $0.65 each."
+        }
+      ]
+    },
+    
+    {
+      "name" : "Back to Basic Cheese Burger*", "cost" : "8.95",
+      "desc" : "Beef or veggie patty on a sesame bun with lettuce, tomato, onion & pickle. Cheese: Cheddar, Swiss, Provalone, or Pepper-Jack. Served with: Chips, fruit, rainbow pasta, or potato-mac and a pickle wedge.",
+      "adds" : [
+        {"desc" : "Add bacon", "cost" : "2.50"},
+        {"desc" : "Add guacamole", "cost" : "1.50"}
+      ]
+    },
+    
+    {
+      "name" : "Creative Classic Sandwich", "cost" : "7.95",
+      "desc" : "Bread: white, wheat, sourdough, rye, croissant or wrap. Meat: ham, turkey, bacon, tuna, or egg salad. Cheese: cheddar, swiss, provalone, or pepperjack. Includes: lettuce, tomato, onion, pickle, pepperoncinis, mayo and mustard. Served with: chips, fruit, rainbow pasta, or potato-mac and a pickle wedge.",
+      "adds" : [
+        {"desc" : "Sub w/ side green salad", "cost" : "2.00"}
+      ]
+    },
+    
+    {
+      "name" : "Hi-Lo's Specialty Sandwiches", "cost" : "8.95",
+      "desc" : "Craizy Chicken / Meatloaf / Club Sandwich. Served with: chips, fruit, rainbow pasta, or potato-mac and a pickle wedge.",
+      "adds" : [
+        {"desc" : "Sub w/ side green salad", "cost" : "2.00"}
+      ]
+    },
+    
+    {
+      "name" : "Meatloaf Dinner", "cost" : "10.95",
+      "desc" : "Hi-Lo's Specialty Meatloaf served with green salad, house potatoes and choice of cornbread or toast.",
+      "adds" : []
+    },
+    
+    {
+      "name" : "Hi-Lo's Side Green Salad", "cost" : "3.95",
+      "desc" : "",
+      "adds" : []
+    },
+    
+    {
+      "name" : "Deluxe Salad", "cost" : "10.95",
+      "desc" : "Fresh romaine and/or spinach topped with a mix and match of (5) five of your favorite salad items below. Served w/ ranch, Italian, honey-mustard, blue cheese, ceasar or thousand island",
+      "adds" : [
+        { 
+        "extras" : [
+          "Tomato", "Guacamole", "Mushroom", "Red Onion", "Shredded Carrot", "Pepperoncinis", "Bell Peppers", "Olives", "Peas", 
+          "Ham", "Bacon", "Tuna", "Chicken", "Hard-Boiled Egg", "Pepperoni", "Salami",
+          "Kidney Beans", "Garbonzo Beans", "Walnuts", "Pecans", "Almonds", "Pinenuts", "Sunflower Seeds", "Raisins/Craizins",
+          "Cheddar", "Mozzarella", "Feta", "Jack"
+        ],
+        "note" : "Add some more things @ $0.65 each."
+        }
+      ]
+    },
+    
+    {
+      "name" : "Soup or Chili", "cost" : "4.95",
+      "desc" : "Bowl of Soup or chili served with cornbread or toast.",
+      "adds" : [
+        {"desc" : "Cup of Soup or Chili", "cost" : "3.50"},
+        {"desc" : "Add Cheese or Onions", "cost" : "$0.50"}
+      ]
+    }
+  ],
+  
+  "cereal" : [
+    {"desc" : "Oatmeal or Cream o' Wheat",             "cost" : "3.95"},
+    {"desc" : "Cold Cereal",                           "cost" : "2.95"},
+    {"desc" : "Add Banana",                            "cost" : "1.50"},
+    {"desc" : "Raisins, Craizins, Pecans, or Walnuts", "cost" : "0.65"}
+  ],
+  
+  "sides" : [
+    {"desc" : "House Potatoes",              "cost" : "2.50"},
+    {"desc" : "Ham, Sausage, Bacon or Spam", "cost" : "2.50"},
+    {"desc" : "1 Egg*",                      "cost" : "1.25"},
+    {"desc" : "Toast or English Muffin",     "cost" : "1.25"},
+    {"desc" : "Fruit Bowl",                  "cost" : "3.50"},
+    {"desc" : "Fruit Cup",                   "cost" : "2.75"},
+    {"desc" : "Assorted Chips",              "cost" : "1.50"},
+    {"desc" : "Hi-Lo's Salsa",               "cost" : "1.25"},
+    {"desc" : "Guacamole",                   "cost" : "1.50"},
+    {"desc" : "Sour Cream",                  "cost" : "1.25"},
+    {"desc" : "Cream Cheese",                "cost" : "1.25"},
+    {"desc" : "Cottage Cheese",              "cost" : "1.50"},
+    {"desc" : "Bagel & Cream Cheese",        "cost" : "2.95"},
+    {"desc" : "Potato-Mac or Rainbo Pasta",  "cost" : "1.95"},
+    {"desc" : "Muffins",                     "cost" : "2.50"},
+    {"desc" : "Cornbread",                   "cost" : "1.95"},
+    {"desc" : "Peanut Butter",               "cost" : "1.25"}
+  ],
+  
+  "desserts" : [
+    {"name" : "Ice Cream Sundae", "cost" : "3.95"},
+    {"name" : "Rootbeer Float",   "cost" : "3.95"}
+  ],
+  
+  "NFKO" : [
+    {"name" : "Kid Pancake",         "cost" : "3.95"},
+    {"name" : "Grilled Cheese",      "cost" : "3.95"},
+    {"name" : "p.B. & J.",           "cost" : "3.95"},
+    {"name" : "Mac & Cheese",        "cost" : "3.95"},
+    {"name" : "Hot Dog",             "cost" : "3.95"},
+    {"name" : "Chili Dog w/ Cheese", "cost" : "3.95"},
+    {"name" : "Fluffer Nutter",      "cost" : "3.95"},
+    {"name" : "Quesadilla",          "cost" : "3.95"},
+    {"name" : "--With Chicken",      "cost" : "3.95"},
+    {"name" : "Mini-Muffin Pizza",   "cost" : "3.95"},
+    {"name" : "--With Pepperoni",    "cost" : "3.95"}
+  ],
+  
+  "beverages" : [
+    {
+      "name" : "'Grounds for Change' Coffee", "cost" : "2.75",
+      "desc" : "Bottomless in-house (To Go Cup add .25)"
+    },
+    
+    {
+      "name" : "Hot or Iced-T", "cost" : "2.25",
+      "desc" : ""
+    },
+    
+    {
+      "name" : "Coffee On The Go", "cost" : "",
+      "desc" : "*.25 Off With Your Own Mug*",
+      "sizes" : [
+        {"size" : "12oz", "cost" : "1.75"},
+        {"size" : "16oz", "cost" : "1.85"},
+        {"size" : "20oz", "cost" : "1.95"}
+      ]
+    },
+    
+    {
+      "name" : "Can of Soda", "cost" : "1.50",
+      "desc" : "",
+      "adds" : [
+        { 
+        "extras" : [
+          "Coke", "Diet Coke", "Pepsi", "Diet Pepsi", "Dr. Pepper", "Diet Dr. Pepper", "Root Beer", "Mountain Dew", "Gingerale", "Strawberry Fanta",
+          "Grape Fanta", "Orange Fanta", "Squirt", "Ruby Red Squirt", "V-8", "Sprite", "Hawaiian Punch", "Fresca"
+        ]
+        }
+      ]
+    },
+    
+    {
+      "name" : "Italian Soda", "cost" : "",
+      "desc" : "",
+      "sizes" : [
+        {"size" : "12oz", "cost" : "3.50"},
+        {"size" : "16oz", "cost" : "4.00"},
+        {"size" : "20oz", "cost" : "4.50"}
+      ]
+    },
+    
+    {
+      "name" : "Juice", "cost" : "",
+      "desc" : "O.J., Cran, Apple, Grapefruit",
+      "sizes" : [
+        {"size" : "SM", "cost" : "3.00"},
+        {"size" : "LG", "cost" : "3.75"}
+      ]
+    },
+    
+    {
+      "name" : "Ice-Cold Milk", "cost" : "",
+      "desc" : "Whole, 2% Low-Fat, Soy",
+      "sizes" : [
+        {"size" : "SM", "cost" : "2.25"},
+        {"size" : "LG", "cost" : "2.95"}
+      ]
+    },
+    
+    {
+      "name" : "Hot Chocolate", "cost" : "3.25",
+      "desc" : "with Whipped Cream and Sprinkles"
+    },
+    
+    {
+      "name" : "Hot Apple Cider", "cost" : "2.75",
+      "desc" : ""
+    },
+    
+    {
+      "name" : "Ovaltine Or Strawberry Quick", "cost" : "",
+      "desc" : "With Whip Cream & Sprinkles!",
+      "sizes" : [
+        {"size" : "SM", "cost" : "3.25"},
+        {"size" : "LG", "cost" : "4.25"}
+      ]
+    },
+    
+    {
+      "name" : "Tang Or Country Time Lemonade", "cost" : "",
+      "desc" : "",
+      "sizes" : [
+        {"size" : "SM", "cost" : "2.25"},
+        {"size" : "LG", "cost" : "2.75"}
+      ]
+    }
+    
+  ]
+};
+
+printMenu()
+
+function printMenu() {
+  //Opens the form tag
+  var output = "<form id='orderForm' action='receipt.php' method='post' onsubmit='interceptSubmit()'>";
+  for(i in data.menuItems){
+    //Prints the name, cost, and description of each item inside a DIV element.
+    output += "<div class='menuItem'> <h1>" + data.menuItems[i].name + "</h1><b>" + data.menuItems[i].cost + "</b><p>" + data.menuItems[i].desc + "</p>" + "<input type='number' id='MI" + i + "' name='MI" + i + "' value = 0> Quantity";
+    
+    //Prints the additionals for each menu item.
+    //for(x in data.menuItems[i].adds) {
+    //  output += "<p class='add'>" + data.menuItems[i].adds[x].desc + data.menuItems[i].adds[x].cost + "</p>";
+    //}
+    output += "</div>";
+  }
+  output += "<input type='submit' name='submit'>Submit"; 
+  output += "<input type='hidden' id='invoiceText' name='invoiceText' value=''>";
+  output += "</form>";
+  //Form closed
+  //Prints the menu.
+  document.getElementById("outputArea").innerHTML = output;
+}
+
+function calcInvoiceText() {
+  var runningTotal = 0;
+  for(i=0; i<data.menuItems.length; i++){
+    var costOfThisItem  = parseInt(data.menuItems[i].cost);
+    var inName = "MI" + i;
+    var quantOfThisItem = document.getElementById(inName).value;
+    var totalCostOfThisItem = 0;
+    totalCostOfThisItem = costOfThisItem * quantOfThisItem;
+    runningTotal += totalCostOfThisItem;
+    invoiceTextOutput += "<p>" + quantOfThisItem + "x" + data.menuItems[i].name + "@" + costOfThisItem + "</p><p class='right'>" + totalCostOfThisItem + "</p><br></br>";
+  }
+  document.getElementById("invoiceText").value = invoiceTextOutput;
+}
+
+//To run before the page goes to the action page.
+function interceptSubmit() {
+  calcInvoiceText();
+}
+  
+
+
+
+
+</script>
+</html>

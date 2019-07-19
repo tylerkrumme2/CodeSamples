@@ -1,0 +1,84 @@
+.featureSet {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topFeatureBar {
+    margin-top: 50px;
+}
+
+.feature {
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.feature h5 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.featureP {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.featureLink { 
+    padding: 0px;
+    margin: 0px;
+}
+
+.graphic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 2px solid rgb(34, 213, 236);
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.bg {
+    clear: both;
+    width: 100%;
+}
+
+.banner {
+    height: 80px;
+    background-color: rgb(16, 129, 105);
+    margin-top: 100px;
+    text-align: center;
+}
+
+.banner h5 {
+    font-size: 1.5rem;
+    color: white;
+    padding-top: 20px;
+}
+
+.fit {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.expander {
+    clear: both;
+}

@@ -1,0 +1,169 @@
+/* COLOR CONTROL PANEL */
+
+.header {
+    background-color: #114668;
+}
+
+.primaryNav:hover .hiddenNav {
+    background-color: #114668;
+}
+
+.navTitle {
+    color: white;
+}
+
+.primaryNav:hover .hiddenNavItem {
+    color: white;
+}
+
+.colLeft {
+    border-right: 1px solid white;
+}
+
+.primaryNav:hover {
+    border-color: #72bf44;
+}
+
+.primaryNav:hover .navTitle p {
+    color: #72bf44;
+}
+
+.hiddenNavItem div:hover{
+    color: #72bf44;
+}
+
+
+
+
+/* OTHER STYLES */
+
+.header {
+    height: 60px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.lowerHeader {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link {
+    float: right;
+    text-decoration: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.logo {
+    width: 75px;
+    height: 50px;
+    margin-top: 4px;
+    margin-right: 20px;
+    float: left;
+}
+
+.primaryNav {
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 4px solid transparent;
+}
+
+.primaryNav:hover {
+    transition: 350ms ease;
+}
+
+.navTitle {
+    text-decoration: none;
+}
+
+.navTitle p {
+    margin-bottom: 0px;
+    font-size: .85rem;
+    font-weight: 550;
+}
+
+.primaryNav:hover .navTitle p {
+    transition: 350ms ease;
+}
+
+.hiddenNav {
+    padding: 10px;
+    display: none;
+    margin-left: -10px;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.primaryNav:hover .hiddenNav {
+    margin-top: 4px;
+    display: block;
+    border-top: 4px solid transparent;
+    box-shadow: 0 0 12px 0 hsla(0, 0%, 0%, 0.2);
+    transition: 500ms ease;
+    transition-delay: 1ms;
+}
+
+.primaryNav:hover .hiddenNavItem {
+    transition: 500ms ease;
+}
+
+.hiddenNavItem {
+    color: transparent;
+    text-decoration: none;
+}
+
+.hiddenNavItem div{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: .7rem;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.colLeft {
+    float: left;
+    padding-right: 10px;
+}
+
+.colRight {
+    float: left;
+    padding-left: 10px;
+}
+
+
+.hiddenNavItem div:hover{
+    transition: 350ms ease;
+}
+
+.btn {
+    float: left;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.secondaryNav {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-top: 10px;
+}
+
+.expander {
+    clear: both;
+}

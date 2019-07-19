@@ -1,0 +1,196 @@
+.expander {
+    clear: both;
+}
+
+.planContainer {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -150px;
+}
+
+.topBar {
+    background-image: linear-gradient(to bottom right, #2fe46b, #428bc7);
+    height: 400px;
+    width: 100%;
+}
+
+.topBar h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.plan {
+    width: 30.5%;
+    margin-left: 2%;
+    float: left;
+    margin-top: 2%;
+    text-align: center;
+    height: 600px;
+}
+
+.col {
+    width: 2%;
+    float: left;
+    height: 469px;
+    margin-top: 131px;
+    background-image: linear-gradient(to left, grey, transparent);
+}
+
+.colRight {
+    width: 2%;
+    float: left;
+    height: 469px;
+    margin-top: 131px;
+    background-image: linear-gradient(to right, grey, transparent);
+}
+
+.bottomShadow {
+    clear: both;
+    width: 100%;
+    float: left;
+    height: 3px;
+}
+
+.bottomCol {
+    width: 2%;
+    height: 5px;
+    float: left;
+    background-image: linear-gradient(45deg, transparent, transparent, grey);
+}
+
+.bottomMiddleCol {
+    width: 96%;
+    height: 5px;
+    float: left;
+    background-image: linear-gradient(to bottom, grey, transparent);
+}
+
+.bottomColRight {
+    width: 2%;
+    height: 5px;
+    float: left;
+    background-image: linear-gradient(-45deg, transparent, transparent, grey);
+}
+
+.content {
+    width: 96%;
+    float: left;
+    background-color: white;
+    height: 600px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.plan:nth-child(2) .content {
+    margin-top: -19px;
+    height: 638px;
+}
+
+.plan:nth-child(2) .col {
+    height: 488px;
+}
+
+.plan:nth-child(2) .colRight {
+    height: 488px;
+}
+
+.plan:nth-child(1) {
+    margin-left: 0;
+}
+
+.plan:nth-child(2) {
+    width: 35%;
+    margin-top: 0;
+    padding-top: 2%;
+}
+
+.plan:nth-child(2) h6 {
+    font-size: 1.4rem;
+    padding-top: 20px;
+}
+
+.plan h6 {
+    font-size: 1.2rem;
+    padding-top: 15px;
+    color: white;
+}
+
+hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleBlock {
+    background-color: rgb(58, 58, 58);
+    height: 55px;
+    margin-bottom: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan:nth-child(2) .titleBlock {
+    height: 74px;
+    background-color: rgb(58, 58, 58);
+    margin-bottom: 0px;
+}
+
+.mpBanner {
+    display: none;
+}
+
+.plan:nth-child(2) .mpBanner {
+    display: block;
+    height: 20px;
+    background-color: rgb(255, 81, 0);
+    margin-bottom: 10px;
+}
+
+.mpBanner p {
+    font-size: .65rem;
+    line-height: 20px;
+    font-weight: 720;
+    letter-spacing: .15rem;
+    color: white;
+}
+
+.fit {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+
+.desc {
+    margin-bottom: 6px;
+}
+
+.price {
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.subtext {
+    font-size: .6rem;
+}
+
+.content h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.extraContent { 
+    margin-top: 15px;
+}

@@ -1,0 +1,34 @@
+.banner {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(7, 158, 218);
+    margin-top: 150px;
+}
+
+.content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bannerText {
+    font-size: 2rem;
+    float: left;
+    color: black;
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.link {
+    color: black;
+    float: right;
+}
+
+.linkText {
+    margin-left: 0px;
+    font-size: 1.5rem;
+    float: left;
+    color: black;
+    margin-bottom: 0px;
+    margin-top: 33px;
+}
